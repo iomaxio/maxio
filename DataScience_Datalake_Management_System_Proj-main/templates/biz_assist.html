@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalake Management System</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='Images/home_first.jpg')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/biz_assist.css')}}" >
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a class="biz_assist">BIZ ASSIST</a></li>
+                <li><a href="assist.html">BACK</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="image">
+            <img src="{{url_for('static',filename='Images/biz_assist.png')}}" alt="My Image">
+        </div>
+        
+    </div>
+
+
+    <div class="container">
+        <h1>BIZ ASSIST</h1>
+    </div>
+
+    <div class="col">
+        <form method="POST" class="feature_search" action="" > 
+          
+          <input class="box"  type="text"  placeholder="ENTER TABLE NAME" name="DIM_ACCOUNT" />
+          <br> <br>
+          <div class="button">
+            <button class="search_button" type="submit">Search</button>
+          </div>
+        </form>
+    </div>
+    
+    <div class="list1">
+        <ul class="list">
+            {% for search in searchDetails %}
+                
+                <li>STORAGE NAME : {{search[1]}}</li>
+                <br>
+                <li>CONTAINER NAME : {{search[2]}}</li>
+                <br>
+                <li>FOLDER NAME : {{search[3]}}</li>
+                <br>
+                <li>TABLE NAME : {{search[4]}}</li>
+                <br>
+                <li>BLOB NAME : {{search[5]}}</li>
+                <br>
+                <li>BLOB CONTENT TYPE : {{search[6]}}</li>
+                <br>
+                <li>BLOB URL : {{search[7]}}</li>
+                <br>
+                <li>BLOB LAST MODIFIED : {{search[8]}}</li>
+                <br>
+                <li>BLOB CREATION TIME : {{search[9]}}</li>
+                <br>
+                <li>BLOB TYPE : {{search[10]}}</li>
+                <br>
+                <li>BLOB SIZE : {{search[11]}}</li>
+                <br>
+                <li>BLOB SIZE BYTES : {{search[11]}}</li>
+                <br>
+                <li>ACCESS TIRE : {{search[12]}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div clas="list2">
+      
+        
+    </div>
+
+
+
+</body>
+</html>

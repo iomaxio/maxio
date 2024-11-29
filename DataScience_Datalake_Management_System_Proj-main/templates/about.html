@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalake Management System</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='Images/home_first.jpg')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/about.css')}}" >
+</head>
+<body>
+    <div class="header">
+      <nav>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a class="about" href="#">ABOUT</a></li>
+            <li><a href="assist.html">ASSIST</a></li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+    <div class="content">
+
+        <div class="text">
+            <h2>ABOUT</h2>
+            
+            <h1>Enabling Modern Datastore to improve extract information of the data stored in ADLS</h1>
+            <h1></h1>
+            <p>
+            </p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="{{url_for('static',filename='Images/tech_assist.png')}}" alt="Image 1">
+        <div class="image-content">
+          <h2>TECH ASSIST</h2>
+          <p>It provides the information of the file’s tables present in the lake which is useful for the decisions of the performance cost and scalability.</p>
+        </div>
+      </div>
+    
+      <div class="image-container">
+        <img src="{{url_for('static',filename='Images/biz_assist.png')}}" alt="Image 1">
+        <div class="image-content">
+          <h2>BIZ ASSIST</h2>
+          <p>It provides the information of the data present in the table files etc., which will be helpful for business user to understand the data and decide with the usage of the schema.</p>
+        </div>
+      </div>
+    
+      <div class="image-container">
+        <img src="{{url_for('static',filename='Images/kpif_assist.png')}}" alt="Image 1">
+        <div class="image-content">
+          <h2>KPIF ASSIST</h2>
+          <p>It is a client specific module, which helps to provide the information of the KPI’s dependents like base tables, curated tables along with the location of the KPI so on.</p>
+        </div>
+      </div>
+    </body>
+    </html>
+   
+</body>
+</html>

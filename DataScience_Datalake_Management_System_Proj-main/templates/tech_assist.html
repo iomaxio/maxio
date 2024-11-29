@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalake Management System</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='Images/home_first.jpg')}}">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/tech_assist.css')}}" >
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a class="tech_assist">TECH ASSIST</a></li>
+                <li><a href="assist.html">BACK</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="image">
+            <img src="{{url_for('static',filename='Images/tech_assist.png')}}" alt="My Image">
+        </div>
+        
+    </div>
+
+
+    <div class="container">
+        <h1>TECH ASSIST</h1>
+    </div>
+
+ 
+
+    <table class="table_cls">
+        <thead>
+          <tr>
+            <th scope="col">CONTAINER NAME</th>
+            <th scope="col">TOTAL NUMBER OF FOLDER </th>
+            <th scope="col">TOTAL NUMBER OF TABLE</th>
+            <th scope="col">TOTAL SIZE</th>
+
+          </tr>
+        </thead>
+        <ul ></ul>
+        <tbody>
+          {% for search in searchDetails %}
+          <tr align="center">
+            
+            <td> {{search[0]}} </td>
+            <td> {{search[1]}} </td>
+            <td> {{search[2]}} </td>
+            <td> {{search[3]}} </td>
+        </tr>
+          {% endfor %}
+        </tbody>
+        
+      </table>
+
+
+
+
+</body>
+</html>
