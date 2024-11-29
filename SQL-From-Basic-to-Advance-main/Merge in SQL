@@ -1,0 +1,12 @@
+Easy way to do update, insert and delete statement at one go...
+
+
+MERGE INTO Table1 as T1
+USING Table2 as T2
+on T1.ID = T2.ID
+WHEN MATCHED THEN
+  UPDATE SET 
+    T1.Title = T2.Title
+WHEN NOT MATCHED THEN
+  INSERT (Id, Title)
+  Values (T2.Id, T2.Title)

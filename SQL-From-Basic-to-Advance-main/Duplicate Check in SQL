@@ -1,0 +1,44 @@
+1. Duplicate Check
+-------------------
+select
+DATE, CALEN_YEAR, CALEN_MON, COUNTRY_NAME, COUNTRY_CODE, REGION,
+SKU, MATERIAL_ID, TOTAL_UNITS_RANK, count(*)
+from TEMP_TABLE_A
+group by
+DATE, CALEN_YEAR, CALEN_MON, COUNTRY_NAME, COUNTRY_CODE, REGION,
+SKU, MATERIAL_ID, TOTAL_UNITS_RANK having count(*) > 1
+
+
+2. Minus Check
+----------------
+select * from dev_layout2
+minus
+select * from prod_layout2
+uniom all
+select * from prod_layout2
+minus
+select * from dev_layout2
+
+
+3. Count Check
+-------------------
+select count(*), 'Dev_Final_Table' as Table_Name from Dev_table
+union all
+select count(*), 'Prod_Final_Table' as Table_Name from Prod_table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

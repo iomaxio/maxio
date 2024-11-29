@@ -1,0 +1,30 @@
+1. CREATE TABLE t (
+      c1 INT, c2 INT, c3 VARCHAR,
+      PRIMARY KEY(C1,C2)
+   );
+=> Set c1, c2 as Primary Key.
+
+2. CREATE TABLE t (
+      c1 INT PRIMARY KEY,
+      c2 INT,
+      FOREIGN KEY (c2) REFERENCES t2(c2)
+   );
+=> Set c2 as Foreign Key.
+
+3. CREATE TABLE t (
+      c1 INT, c2 INT
+      UNIQUE (c1, c2)
+   );
+=> Make the values c1, c2 unique.
+
+4. CREATE TABLE t (
+      c1 INT, c2 INT
+      CHECK (c1> 0 AND c1 >= c2)
+   );
+=> Ensuring c1>0 and values in c1 >= c2.
+
+5. CREATE TABLE t (
+      c1 INT PRIMARY KEY,
+      c2 VARCHAR NOT NULL
+   );
+=> Set c2 column value NOT NULL.

@@ -1,0 +1,25 @@
+1. CREATE VIEW v(c1, c2)
+   AS
+   SELECT c1, c1 FROM t;
+=> Create a view that consist of c1, c2 column.
+
+2. CREATE VIEW v(c1, c2)
+   AS
+   SELECT c1, c2 FROM t
+   WITH [CASCADED | LOCAL] CHECK OPTION;
+=> Create a new view with check option.
+
+3. CREATE RECURSIVE VIEW v
+   AS 
+   select statement --- anchor part
+   UNION ALL
+   select statement --- recursive part
+=> Create a recursive view.
+
+4. CREATE TEMPORARY VIEW  v
+   AS
+   select c1, c2 FROM t;
+=> Create a temporary view.
+
+5. DROP VIEW view_name;
+=> Delete the view.

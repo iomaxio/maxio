@@ -1,0 +1,54 @@
+Example 1
+---------
+select
+Artist_Name,
+Artist_ID,
+count(Track_Id) as Total_Track,
+Year,
+case
+    WHEN count(Track_Id) <=20 THEN 'Low Track Level'
+    WHEN count(Track_Id) >=21 and count(Track_Id) <=90 THEN 'Mid Track Level'
+    ELSE 'High Track Level'
+End as Track_Level
+from 
+TEMP_FACT_FOUNDATION_TABLE
+group by
+Artist_Name,
+Artist_ID,
+Year
+order by
+Artist_Name, 
+Year asc
+------------------------------------------------------------------------------------------------------------------
+Example 2
+---------
+select
+Trim(OUTL_CODE) as OUTLET_CODE,
+Trim(CNPJ) as CNPJ,
+Trim(~Status) as Status,
+case
+  When channel = 'NA' Then 'Not Elligible'
+  When channel = 'IC' Then 'Independent Chains'
+  When channel = 'BC' Then 'Big Chains'
+END as Channel
+from 
+TEMP_PAINEL_TABLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

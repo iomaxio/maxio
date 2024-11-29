@@ -1,0 +1,25 @@
+1. CREATE OR MODIFY TRIGGER trigger_name
+   WHEN EVENT
+   ON table_name TRIGGER_TYPE
+   EXECUTE stored_procedure;
+=> Create or Modify a Trigger.
+
+2. WHEN
+      BEFORE - Invoke before the event occurs.
+      AFTER - Invoke after the event occurs.
+   EVENT
+      INSERT - Invoke for INSERT.
+      UPDATE - Invoke for UPDATE.
+      DELETE - Invoke for DELETE.
+   TRIGGER TYPE
+      FOR EACH ROW.
+      FOR EACH STATEMENT.
+ 
+3. CREATE TRIGGER before_insert_person
+   BEFORE INSERT
+   ON person FOR EACH ROW
+   EXECUTE stored procedure;
+=> Create a trigger invoked before a new row is inserted into the person table.
+
+4. DROP TRIGGER trigger_name;
+=> Delete the specific trigger.

@@ -1,0 +1,22 @@
+1. INSERT INTO t (column_list)
+   VALUES
+   (value_lists 1)
+   (value_lists 2).... ;
+=> Insert multiple rows into the table t.
+
+2. INSERT INTO t1 (column_list)
+   SELECT column_list FROM t2;
+=> Insert rows from t2 into t1.
+
+3. UPDATE t
+   SET 
+   c1 = new_value
+   c2 = new_value WHERE 'condition';
+   
+=> Update new value c1, c2 that matches where condition.
+
+4. DELETE c1 FROM t where condition;
+=> Delete the particular row which Amatches the where condition.
+
+
+

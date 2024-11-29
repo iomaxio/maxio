@@ -1,0 +1,27 @@
+1. SELECT * FROM T;
+=> Quering all rows and records from Table T.
+
+2. SELECT C1, C2 FROM T;
+=> Quering Data in column C1 & C2 from Table T.
+
+3. SELECT DISTINCT C1 FROM T WHERE condition;
+=> Quering Distinct Row from Table T.
+
+4. SELECT C1, C2 FROM T WHERE condition;
+=> Quering Data & Filter row with a condition from Table T.
+
+5. SELECT C1, C2 FROM T
+   ORDER BY C1 ASC [DEC]
+=> Sort the result set in Ascending or Descending order.
+
+6. SELECT C1, C2 FROM T
+   ORDER BY C1 LIMIT N OFFSET
+=> Skip offset of rows & return the next N rows.
+
+7. SELECT C1, AGRREGATE (C2) FROM T
+   GROUP BY C1 HAVING condition.
+=> Group by rows using an Agrregate Function.
+
+8. SELECT C1, AGGREGATE (C2) FROM T
+   GROUP BY C1 HAVING condition
+=> Filter groups using having cluase.

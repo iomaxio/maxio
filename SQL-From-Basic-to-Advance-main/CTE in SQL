@@ -1,0 +1,37 @@
+CTE -> Common Table Expression
+
+CTE is used to simplify the sql query. CTE act as a virtual tables that are created during execution.
+We can define CTEs by adding a WITH clause directly 
+before the SELECT, INSERT, UPDATE, DELETE, or MERGE statement. The WITH clause can include one or more CTEs separated by commas. 
+
+Syntax
+--------
+with 
+cte as
+(
+  select a, b, c from t
+)
+select * from cte
+
+Example Code
+------------
+
+with cte1
+as (
+select 2000 as new_col,
+Month_of_Order_Date, 
+Category, Target, Month, Year, Month_Conv
+from TEMP_TARGET
+)
+select Month_of_Order_Date, 
+Category, 
+Target, 
+Month, 
+(Year+new_col) as Year_Conv, 
+Month_Conv
+from cte1
+
+
+
+
+

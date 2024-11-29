@@ -1,0 +1,26 @@
+1. SELECT C1, C2 FROM T1
+   INNER JOIN T2 ON Condition
+=> Inner Join T1 & T2
+
+2. SELECT C1, C2 FROM T1
+   LEFT JOIN T2 ON Condition
+=> Left Join T1 & T2
+
+3. SELECT C1, C2 FROM T1
+   RIGHT JOIN T2 ON Condition
+=> Right Join T1 & T2
+
+4. SELECT C1, C2 FROM T1
+   FULL OUTER JOIN T2 ON Condition
+=> Perform Full Outer Join
+
+5. SELECT C1, C2 FROM T1
+   CROSS JOIN T2 ON Condition
+=> Produce a Cartesian Products of Rows in Table.
+
+6. SELECT C1, C2 FROM T1, T2
+=> Another way to perform cross join
+
+7. SELECT C1, C2 FROM T1 A
+   INNER JOIN T1 B ON Condition
+=> Perform Inner join with T1.

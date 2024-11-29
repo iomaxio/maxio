@@ -1,0 +1,26 @@
+1. SELECT C1, C2 FROM T1
+   UNION [ALL]
+   SELECT C1, C2 FROM T2
+=> Combine Rows from two queries.
+
+2. SELECT C1, C2 FROM T1
+   INTERSECT 
+   SELECT C1, C2 FROM T2
+=> Return the Intersection of two queries.
+
+3. SELECT C1, C2 FROM T1
+   MINUS 
+   SELECT C1, C2 FROM T2
+=> Substarct a result set from another result set.
+
+4. SELECT C1, C2 FROM T1
+   WHERE C1 [NOT] IN value_list
+=> Query rows in a list.
+
+5. SELECT C1, C2 FROM T
+   WHERE C1 BETWEEN LOW AND HIGH
+=> Query Rows between two values.
+
+6. SELECT C1, C2 FROM T
+   WHERE C1 IS [NOT] NULL
+=> Check if values in a table is NULL or Not.
